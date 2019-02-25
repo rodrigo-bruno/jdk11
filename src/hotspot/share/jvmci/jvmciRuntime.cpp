@@ -610,6 +610,11 @@ JRT_ENTRY(jint, JVMCIRuntime::identity_hash_code(JavaThread* thread, oopDesc* ob
   return (jint) obj->identity_hash();
 JRT_END
 
+JRT_ENTRY(jint, JVMCIRuntime::int_stream_sum(JavaThread* thread, oopDesc* obj))
+  // TODO - find the location of the backing storage and compute the sum.
+  return (jint) 111;
+JRT_END
+
 JRT_ENTRY(jboolean, JVMCIRuntime::thread_is_interrupted(JavaThread* thread, oopDesc* receiver, jboolean clear_interrupted))
   Handle receiverHandle(thread, receiver);
   // A nested ThreadsListHandle may require the Threads_lock which

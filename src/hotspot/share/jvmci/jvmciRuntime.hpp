@@ -131,6 +131,7 @@ class JVMCIRuntime: public AllStatic {
   static jboolean thread_is_interrupted(JavaThread* thread, oopDesc* obj, jboolean clear_interrupted);
   static void vm_message(jboolean vmError, jlong format, jlong v1, jlong v2, jlong v3);
   static jint identity_hash_code(JavaThread* thread, oopDesc* obj);
+  static jint int_stream_sum(JavaThread* thread, oopDesc* obj);
   static address exception_handler_for_pc(JavaThread* thread);
   static void monitorenter(JavaThread* thread, oopDesc* obj, BasicLock* lock);
   static void monitorexit (JavaThread* thread, oopDesc* obj, BasicLock* lock);

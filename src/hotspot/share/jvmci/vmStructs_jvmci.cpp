@@ -625,6 +625,7 @@
   declare_function(JVMCIRuntime::thread_is_interrupted) \
   declare_function(JVMCIRuntime::vm_message) \
   declare_function(JVMCIRuntime::identity_hash_code) \
+  declare_function(JVMCIRuntime::int_stream_sum) \
   declare_function(JVMCIRuntime::exception_handler_for_pc) \
   declare_function(JVMCIRuntime::monitorenter) \
   declare_function(JVMCIRuntime::monitorexit) \
