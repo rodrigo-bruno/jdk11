@@ -229,6 +229,12 @@ void JavaCalls::call_special(JavaValue* result, Klass* klass, Symbol* name, Symb
   methodHandle method = callinfo.selected_method();
   assert(method.not_null(), "should have thrown exception");
 
+  printf("JavaCalls::call_special!\n");
+  klass->print_on(tty);
+  printf("\n");
+  name->print();
+  printf("\n");
+
   // Invoke the method
   JavaCalls::call(result, method, args, CHECK);
 }

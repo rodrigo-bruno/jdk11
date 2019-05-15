@@ -1075,6 +1075,13 @@ static oop create_initial_thread(Handle thread_group, JavaThread* thread,
   Handle string = java_lang_String::create_from_str("main", CHECK_NULL);
 
   JavaValue result(T_VOID);
+  
+  printf("Thread::create_initial_thread!\n");
+  vmSymbols::object_initializer_name()->print();
+  printf("\n");
+  vmSymbols::threadgroup_string_void_signature()->print();
+  printf("\n");
+  // TODO - rbruno - I think this is the call to main
   JavaCalls::call_special(&result, thread_oop,
                           ik,
                           vmSymbols::object_initializer_name(),
