@@ -524,6 +524,7 @@ int DCmdFactory::register_DCmdFactory(DCmdFactory* factory) {
 
 DCmd* DCmdFactory::create_local_DCmd(DCmdSource source, CmdLine &line,
                                      outputStream* out, TRAPS) {
+  // TODO - rbruno - I would have to patch here to create new commands.
   DCmdFactory* f = factory(source, line.cmd_addr(), line.cmd_len());
   if (f != NULL) {
     if (!f->is_enabled()) {

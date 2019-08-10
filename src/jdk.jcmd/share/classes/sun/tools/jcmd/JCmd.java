@@ -121,6 +121,8 @@ public class JCmd {
             if (line.trim().equals("stop")) {
                 break;
             }
+            // TODO - rbruno - this is where jcmd launches commands that will land
+            // in cpp land.
             try (InputStream in = hvm.executeJCmd(line);) {
                 // read to EOF and just print output
                 byte b[] = new byte[256];

@@ -2865,6 +2865,7 @@ DEFINE_GETSCALARARRAYREGION(T_DOUBLE,  jdouble, Double,  double
                             HOTSPOT_JNI_GETDOUBLEARRAYREGION_RETURN());
 
 
+// TODO - rbruno - this is where the call to copy arrays back is done!
 #define DEFINE_SETSCALARARRAYREGION(ElementTag,ElementType,Result, Tag \
                                     , EntryProbe, ReturnProbe); \
   DT_VOID_RETURN_MARK_DECL(Set##Result##ArrayRegion \
