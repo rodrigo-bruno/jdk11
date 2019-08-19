@@ -128,6 +128,7 @@ if (HAS_PENDING_EXCEPTION) { \
 void JVMCICompiler::compile_method(const methodHandle& method, int entry_bci, JVMCIEnv* env) {
   JVMCI_EXCEPTION_CONTEXT
 
+  tty->print_cr("[ETHZ] jvmciCompiler.cpp is compiling  %p", method);
   bool is_osr = entry_bci != InvocationEntryBci;
   if (_bootstrapping && is_osr) {
       // no OSR compilations during bootstrap - the compiler is just too slow at this point,
